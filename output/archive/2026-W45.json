@@ -1,0 +1,157 @@
+{
+  "ai_model_and_product": [
+    "淘宝MNN开源0.3B手机模型,iPhone 18 Pro离线跑350 token/s",
+    "腾讯混元Hy4正式版首发视觉能力并计划开源权重",
+    "基元律动发布1250亿参数智能体模型NeoHorse-1.5-Flash",
+    "Ripple-65B Preview自称美国最佳智能体编程开放权重模型",
+    "webAI开源TwIL-8B,数学编程优于Gemma 4 31B",
+    "OpenAI推出网络安全模型GPT-6 Cyber,复现1724项漏洞",
+    "Gemini Omni 1.2 Flash主打更快更便宜与更长片段",
+    "OpenAI发布Images 2.6:更快生成、GIF、API控制",
+    "华为云本月中旬上线盘古模型开源版本",
+    "GPT-6.1 Sol支撑DevRev自主客服"
+  ],
+  "ai_agent_and_governance": [
+    "灵光2.0上线一周托管116万项事务、执行360万次任务,用户破2000万",
+    "Perplexity推出常驻Teammates,多角色接管工作区",
+    "Axiom Math用AI Agent形式化验证Stacks Project",
+    "易鑫开源Harness:智能体治理从执行走向共建",
+    "网易智企帝王蟹升级:Agent Team、知识引擎万典、首发智能工牌",
+    "小红书与Rokid联手补齐Personal Agent短板"
+  ],
+  "ai_infrastructure_and_business": [
+    "Sand.ai 2亿美元A+轮,10个月累计融资3亿美元跻身独角兽",
+    "Fal完成13亿美元F轮,估值160亿美元翻倍",
+    "菜鸟开放全球仓网建AI及具身智能物流实景训练集群",
+    "印度计划24个月内自研GPU,推动SHAKTI、VEGA处理器商业化",
+    "阿里AI向善报告:数据中心算力密度两年增近5倍,绿电占比73.6%",
+    "YC创业公司悬赏100万美元征集5个AI未解材料科学问题",
+    "OpenAI提National Community Compact与算力园区政策蓝图"
+  ],
+  "ai_regulation_and_safety": [
+    "OpenAI自主流水线挖出Linux内核948个提权漏洞",
+    "网信部门整治AI假冒公众人物:清理4.7万余条信息,处置3961个账号",
+    "广电总局重申:扶持真人微短剧,规范AI微短剧",
+    "Anthropic开源FlashProve可证明推理系统,17秒核验模型是否被调包"
+  ],
+  "company_event_keywords": [
+    "Claude Code产品负责人Cat Wu跳槽OpenAI,十天第三位核心成员离开",
+    "妙动科技估值从7亿美元上探至12亿美元,首款产品Beni众筹10小时破125万美元",
+    "安世半导体起诉母公司闻泰科技索赔134亿元",
+    "Meta收购AI编程公司Conductor,同日OpenAI拟收购Pierre Computer",
+    "OpenAI总裁Brockman称公司2027年可能具备IPO条件",
+    "Claude进化速度翻倍,80%增量来自AI",
+    "皓翊星辰成立两年半发两款产品,累计融资千万美元",
+    "理想i6上市一年累计销量近19万辆,标配自研连山5C电池与马赫M100芯片",
+    "京东本地生活业务负责人郭庆离职"
+  ],
+  "embodied_ai_metrics": [
+    "人形机器人与人类连续乒乓球对打突破1000拍",
+    "雷军:小米机器人在工厂“实习”8小时",
+    "国内人形机器人今年产量或超10万台",
+    "XROGO在CeMAT ASIA发布机器人到岗计划:像雇人一样雇机器人",
+    "进博会人形机器人与人类对打乒乓球首日创连续99拍纪录",
+    "万元级人形机器人进入真交付竞赛,价格成入场券"
+  ],
+  "embodied_ai_models_and_os": [
+    "百万小时数据能否让机器人学会一切,具身数据战成焦点",
+    "理想OTA 9.2推送,马赫VLA 2.5升级"
+  ],
+  "embodied_ai_hardware_and_deployment": [
+    "智元远征A3平台完成人机乒乓连续对打超1000拍",
+    "Agility Robotics以SPAC上市,人形机器人估值口径多标尺并存",
+    "小鹏理想大众长城VLA智驾覆盖10万到50万价位",
+    "全球首个仿生人形机器人新闻主播“新言”“新语”发布",
+    "具身智能转向仓库场景找生意",
+    "丰田设直属机器人部门,首席生产官兼任负责人"
+  ],
+  "embodied_ai_funding_and_capital": [],
+  "embodied_ai_standards_and_policy": [
+    "六部门推动具身智能、大模型、脑机接口、外骨骼进养老领域",
+    "台州具身智能机器人获省级培育平台"
+  ],
+  "ai_creation_and_workflow": [
+    "54岁大叔带队“草台班子”手搓AI短剧《持械入宋》播放66亿、商业回报约千万",
+    "AI漫剧龙头股5连板,封单超80万手",
+    "AI漫剧产能狂飙,万播分账跌至个位数",
+    "AI生成科幻片Gods Don't Give Gifts进院线,Grimes出演",
+    "9人7天做出AI宠物短剧,3900万热度",
+    "火龙漫剧给作者发3000块“月薪”的创作者成长计划"
+  ],
+  "ai_open_source": [
+    "百度开源文心5.5 Flash Base:280B总参数、14B激活、33.5T tokens预训练",
+    "月之暗面开源Kimi K3.1 Pro,登顶Agent Arena开放权重榜",
+    "英伟达团队与Pika基于MiniMax开源视频模型H3做二次开发",
+    "Ripple-65B Preview在TerminalBench 2.1优于Meta Muse Spark Open 816B",
+    "有道子曰Confucius4-R2T2开源4天登顶HF ASR热榜,下载20万",
+    "DeepSeek Harness发v0.2.2-alpha.3,扩代码审查与插件生态"
+  ],
+  "world_models": [
+    "李飞飞World Labs发布Frameboy,Atlas实时流式生成最高15FPS、1440p",
+    "李飞飞团队把世界模型装进复古掌机,单张图实时跑15帧",
+    "智象梅涛提出智能体化全模态世界模型,中国周Token调用量93万亿为美国4.16倍",
+    "百度无人车世界模型实时推演全局,跑一天抵三年",
+    "百度发布首个物理AI世界模型,称全球唯二",
+    "世界模型上车:2027款风云T11首搭软硬一体智驾"
+  ],
+  "3d_game_ai": [],
+  "ai_tools_and_tech_life": [
+    "特斯拉为进欧盟放弃FSD名称,超速上限限制在10%",
+    "拾趣Magpie v0.1.20重构屏幕捕获,划词即翻译解释总结"
+  ],
+  "reveal_and_expose": [
+    "spaCy作者长文炮轰Astra爆改Qwen权重"
+  ],
+  "disruption": [
+    "蔚来李斌:自动驾驶不应让出租车和网约车司机失去工作"
+  ],
+  "tech_shock": [],
+  "ai_pet_ip_博主自创": [
+    "成都95后小伙AI手搓猫界李子柒,播放量超5亿",
+    "9人7天AI宠物短剧拿下3900万热度",
+    "博主猫子柒在成都“养”两只AI猫"
+  ],
+  "vibe_video_博主自创": [
+    "52岁退休会计零基础AI手搓《月圆长安夜》获香港短片节最佳美术奖",
+    "UP主用AI手搓番剧让日本动画界破防"
+  ],
+  "ai_art_and_music_博主自创": [],
+  "ai_coding_agent_博主自创": [],
+  "ai_short_drama_and_fail_博主自创": [
+    "35岁中专小伙手搓AI短剧,全网流量8000万、月入过万",
+    "湖南00后老师用AI手搓消消乐教化学"
+  ],
+  "3d_game_and_agent_博主自创": [],
+  "viral_lexicon": [
+    "手搓",
+    "五连板",
+    "开源",
+    "同尺寸SOTA",
+    "连板",
+    "草台班子",
+    "真交付",
+    "到岗",
+    "拼真活",
+    "AI造AI",
+    "上岗",
+    "实习"
+  ],
+  "creator_viral_lexicon": [
+    "手搓",
+    "AI漫剧",
+    "草台班子",
+    "万播分账",
+    "猫界李子柒",
+    "Vibe Coding"
+  ],
+  "executive_interviews_and_talks": [
+    "陈天桥演讲:AI下半场竞争从“生成”转向“验证”,Apodex近万张GPU、150名科学家",
+    "Hugging Face CEO谈AI末日风险近零,真正危险是闭门造车",
+    "蔚来李斌乌镇演讲:AI应让人工作更轻松更安全,而非剥夺人类存在意义",
+    "Reddit联合创始人奥哈尼安在WIRED World Fair称互联网正失去人类中心",
+    "智元彭志辉:物理AI正从“开发态”迈向“部署态”",
+    "星尘智能来杰:机器人的“iPhone 4时刻”还没到,但可能比想象中更近",
+    "周鸿祎在《瞭望》专访谈破局智能体安全挑战",
+    "花样年华创始人周楠专访:技术平权正在系统性绞杀原创"
+  ]
+}
