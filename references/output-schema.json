@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Weekly AI Keyword Radar",
+  "description": "每周 AI 与具身智能关键词雷达的固定输出结构。所有字段均为字符串数组；没有合格条目时返回空数组，不要凑数。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ai_model_and_product",
+    "ai_agent_and_governance",
+    "ai_infrastructure_and_business",
+    "ai_regulation_and_safety",
+    "company_event_keywords",
+    "embodied_ai_metrics",
+    "embodied_ai_models_and_os",
+    "embodied_ai_hardware_and_deployment",
+    "embodied_ai_funding_and_capital",
+    "embodied_ai_standards_and_policy",
+    "ai_creation_and_workflow",
+    "ai_open_source",
+    "world_models",
+    "3d_game_ai",
+    "ai_tools_and_tech_life",
+    "reveal_and_expose",
+    "disruption",
+    "tech_shock",
+    "ai_pet_ip_博主自创",
+    "vibe_video_博主自创",
+    "ai_art_and_music_博主自创",
+    "ai_coding_agent_博主自创",
+    "ai_short_drama_and_fail_博主自创",
+    "3d_game_and_agent_博主自创",
+    "viral_lexicon",
+    "creator_viral_lexicon",
+    "executive_interviews_and_talks"
+  ],
+  "properties": {
+    "ai_model_and_product": {
+      "title": "AI 模型与产品",
+      "description": "基础模型、产品发布/升级/开放、模型能力与价格。优先保留模型名、参数、上下文、benchmark、可用范围等硬信息。",
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_agent_and_governance": {
+      "title": "AI Agent 与治理",
+      "description": "Agent 产品、协议、平台、权限、信任、互操作、企业落地，以及智能体治理和就业影响。不要放普通模型发布。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_infrastructure_and_business": {
+      "title": "AI 基础设施与商业",
+      "description": "算力、芯片、数据中心、云、订单、融资并购、商业化、海外扩张、产业链变化。优先硬数字和交易对手。",
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_regulation_and_safety": {
+      "title": "AI 监管与安全",
+      "description": "法律、监管、标准、伦理、安全事故、评测、版权、隐私、平台责任。区分“倡议/征求意见”和“正式生效”。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "company_event_keywords": {
+      "title": "公司事件关键词",
+      "description": "公司级事件：IPO、财报、融资、并购、合作、组织调整、诉讼、市值、战略。不要把单一产品发布放这里。",
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "embodied_ai_metrics": {
+      "title": "具身智能指标与临界点",
+      "description": "衡量具身智能进展的指标、阶段判断和临界点：有效工时、成功率、节拍、稳定作业、产线验证、PMF、上岗关等。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "embodied_ai_models_and_os": {
+      "title": "具身模型与操作系统",
+      "description": "VLA、具身基座模型、具身操作系统、仿真平台、数据采集与训练框架、EaaS。优先模型名、参数、开源范围。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "embodied_ai_hardware_and_deployment": {
+      "title": "具身硬件与部署",
+      "description": "机器人本体、关节、灵巧手、传感器、电池、量产、场景部署、订单交付。优先具体机型、场景、时长和数量。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "embodied_ai_funding_and_capital": {
+      "title": "具身融资与资本",
+      "description": "具身智能公司的融资、估值、产业资本、IPO、订单型资本合作。只保留有金额/轮次/投资方的条目。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "embodied_ai_standards_and_policy": {
+      "title": "具身标准与政策",
+      "description": "具身智能/人形机器人的标准、工作组、规划、认证、数据集质量要求、监管试点。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_creation_and_workflow": {
+      "title": "AI 创作与工作流",
+      "description": "AI 视频、图像、音乐、短剧、广告、电影的生产流程、工具链、工作流和新职业。强调“怎么做出来”和产能变化。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_open_source": {
+      "title": "AI 开源",
+      "description": "开源模型、权重、代码、数据集、框架、许可证、下载量、Star、社区生态。优先参数规模、开放范围和社区数据。",
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "world_models": {
+      "title": "世界模型",
+      "description": "世界模型、空间智能、物理仿真、3D/4D 生成、实时交互式环境、物理一致性。不要把普通视频生成放这里。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "3d_game_ai": {
+      "title": "3D 与游戏 AI",
+      "description": "3D 资产、游戏引擎、UE/Unity、AI 游戏、Blender/CAD、空间编辑、游戏制作流程变化。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_tools_and_tech_life": {
+      "title": "AI 工具与科技生活",
+      "description": "消费级 AI 工具、浏览器/办公/搜索/电商/社交、AI 硬件、数字生活、版权与消费者权益。",
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "reveal_and_expose": {
+      "title": "揭露与曝光",
+      "description": "调查报道、爆料、泄露、安全事件、争议、处罚、内部信、隐私问题。优先有明确对象和证据链的条目。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "disruption": {
+      "title": "颠覆与重构",
+      "description": "行业/职业/组织被重构的判断与证据：一人公司、人机分工、岗位替代、商业模式受冲击、产业链重做。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "tech_shock": {
+      "title": "技术冲击",
+      "description": "具有强冲击力的技术演示、能力跃迁、首次实现、极限数字，能让人产生“这也行”的反应。必须有事实支撑。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_pet_ip_博主自创": {
+      "title": "AI 宠物/IP 博主自创",
+      "description": "AI 宠物、虚拟人/IP、人格化账号、连续剧内容、涨粉和商业化。只收创作者侧案例，不收公司通稿。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "vibe_video_博主自创": {
+      "title": "Vibe Video 博主自创",
+      "description": "用代码/一句话/Agent 生成视频的创作者案例，优先播放量、耗时、成本、制作方法。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_art_and_music_博主自创": {
+      "title": "AI 艺术与音乐博主自创",
+      "description": "AI 绘画、音乐、短片创作者，优先作品名、风格、播放量、变现方式和创作方法。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_coding_agent_博主自创": {
+      "title": "AI Coding Agent 博主自创",
+      "description": "用 Coding Agent 做产品、维护项目的创作者案例，优先时间、成本、Star、开源地址和真实翻车。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "ai_short_drama_and_fail_博主自创": {
+      "title": "AI 短剧与翻车博主自创",
+      "description": "AI 短剧、漫剧、驯服 AI、翻车案例，优先播放量、集数、收入、制作周期和失败原因。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "3d_game_and_agent_博主自创": {
+      "title": "3D/游戏与 Agent 博主自创",
+      "description": "用 AI 做 3D、游戏、Agent 整活的创作者，优先作品、获奖、自主行为和可复现方法。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    },
+    "viral_lexicon": {
+      "title": "传播热词",
+      "description": "本周标题和传播中的高频情绪词/热词，2-6 字为主。只收真实出现在信源里的词，不要整句，不要为了凑数造词。",
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 24
+      }
+    },
+    "creator_viral_lexicon": {
+      "title": "创作者圈层热词",
+      "description": "创作者圈层的黑话、方法论词和可复用表达，例如手搓、赛马、错题本、一人公司。只收本周材料中出现或可被材料直接支撑的词。",
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 40
+      }
+    },
+    "executive_interviews_and_talks": {
+      "title": "大佬采访座谈分享",
+      "description": "大佬采访、座谈、播客、演讲、问答、内部信中的观点。必须能识别具体人物与场合；普通公司新闻不要放。没有合格条目返回空数组。",
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80
+      }
+    }
+  }
+}

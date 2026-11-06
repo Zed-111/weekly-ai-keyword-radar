@@ -1,0 +1,12 @@
+.venv/
+.env
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+output/raw.json
+output/candidates.json
+output/run-meta.json
+output/prompts/
+output/weekly-keywords.invalid.json

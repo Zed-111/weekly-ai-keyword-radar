@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0">
+  <channel>
+    <title>"大模型 发布" - Google 新闻</title>
+    <link>https://news.google.com/search?q=test</link>
+    <language>zh-CN</language>
+    <item>
+      <title>某公司发布 LongCat-2.5 大模型 - 美团</title>
+      <link>https://news.google.com/rss/articles/CBMiTestArticle</link>
+      <pubDate>Mon, 02 Nov 2026 08:02:30 GMT</pubDate>
+      <source url="https://www.meituan.com">美团</source>
+      <description>某公司发布新一代大模型，参数与上下文窗口同步升级。</description>
+    </item>
+  </channel>
+</rss>

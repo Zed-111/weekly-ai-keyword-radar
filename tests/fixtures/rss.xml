@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test AI Feed</title>
+    <link>https://example.com</link>
+    <description>Fixture feed</description>
+    <language>zh-cn</language>
+    <item>
+      <title>某模型 2.8T 参数开放权重</title>
+      <link>https://example.com/posts/model?utm_source=rss&amp;utm_medium=feed</link>
+      <description><![CDATA[<p>某团队发布 <strong>2.8T</strong> 参数模型，开放权重与训练代码。</p>]]></description>
+      <pubDate>Thu, 05 Nov 2026 10:00:00 +0800</pubDate>
+      <source>量子位</source>
+      <author>Test Author</author>
+    </item>
+    <item>
+      <title>某模型 2.8T 参数开放权重</title>
+      <link>https://example.com/posts/model-copy</link>
+      <description>同一事件的另一条转载，用于测试标题去重。</description>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0800</pubDate>
+      <source>转载源</source>
+    </item>
+    <item>
+      <title>某机器人完成 8 小时整班作业</title>
+      <link>https://example.com/posts/robot</link>
+      <description>在真实产线完成连续 8 小时作业，成功率 98%。</description>
+      <pubDate>Wed, 04 Nov 2026 09:30:00 +0800</pubDate>
+      <source>机器之心</source>
+    </item>
+    <item>
+      <title>秋季新品发布会公布三款配色</title>
+      <link>https://example.com/posts/phone</link>
+      <description>只有颜色、价格和上市时间，没有技术内容。</description>
+      <pubDate>Wed, 04 Nov 2026 08:00:00 +0800</pubDate>
+      <source>科技媒体</source>
+    </item>
+    <item>
+      <title>旧闻：某模型上周发布</title>
+      <link>https://example.com/posts/old</link>
+      <description>时间窗口之外。</description>
+      <pubDate>Tue, 20 Oct 2026 10:00:00 +0800</pubDate>
+      <source>旧信源</source>
+    </item>
+    <item>
+      <title>没有发布时间的 AI 条目</title>
+      <link>https://example.com/posts/undated</link>
+      <description>用于测试 include_undated。</description>
+      <source>无日期源</source>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,625 @@
+version: 1
+# 信源只负责“粗筛”。真正的选题判断在 scripts/refine.py 里完成。
+# 新增信源时优先用 RSS/Atom；没有 RSS 的站点用 Google News 查询兜底。
+
+fetch:
+  timeout_seconds: 20
+  retries: 2
+  max_workers: 6
+  max_items_per_source: 30
+  include_undated: false
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 WeeklyAIKeywordRadar/1.0"
+  ai_filter:
+    - 人工智能
+    - 大模型
+    - 语言模型
+    - 基础模型
+    - 多模态
+    - 生成式
+    - AIGC
+    - Agent
+    - Agentic
+    - 智能体
+    - 参数
+    - 权重
+    - 开放权重
+    - 机器人
+    - 具身
+    - 人形
+    - 灵巧手
+    - VLA
+    - 世界模型
+    - 3D生成
+    - 视频生成
+    - 图像生成
+    - 语音生成
+    - 数字人
+    - 虚拟人
+    - 算力
+    - 芯片
+    - GPU
+    - 数据中心
+    - 开源模型
+    - Hugging Face
+    - OpenAI
+    - Anthropic
+    - ChatGPT
+    - Copilot
+    - Claude
+    - Gemini
+    - DeepSeek
+    - Kimi
+    - 豆包
+    - 通义
+    - 千问
+    - Qwen
+    - 文心
+    - 混元
+    - 星火
+    - 智谱
+    - GLM
+    - MiniMax
+    - 月之暗面
+    - 阶跃
+    - 商汤
+    - 科大讯飞
+    - Llama
+    - Mistral
+    - Sora
+    - Midjourney
+    - Runway
+    - Pika
+    - 可灵
+    - 即梦
+    - 剪映
+    - 自动驾驶
+    - 智能驾驶
+    - 仿真
+    - 宇树
+    - 智元
+    - 银河通用
+    - 星海图
+    - 优必选
+    - 越疆
+    - 傅利叶
+    - 云深处
+    - 特斯拉
+    - Figure
+    - 1X
+    - AI
+    - AGI
+  exclude_patterns:
+    - 招聘
+    - 诚聘
+    - 活动报名
+    - 直播预告
+    - 课程报名
+    - 培训班
+    - 优惠券
+    - 促销
+    - 抽奖
+    - 红包
+
+sources:
+  # ---------- 中文 AI / 科技媒体 ----------
+  - id: qbitai
+    name: 量子位
+    type: rss
+    url: https://www.qbitai.com/feed
+    weight: 1.15
+    lang: zh
+    ai_only: true
+    max_items: 25
+    tags: [model, product, research]
+
+  - id: ithome
+    name: IT之家
+    type: rss
+    url: https://www.ithome.com/rss/
+    weight: 0.75
+    lang: zh
+    ai_only: false
+    max_items: 25
+    tags: [product, tech_life]
+
+  - id: ifanr
+    name: 爱范儿
+    type: rss
+    url: https://www.ifanr.com/feed
+    weight: 0.80
+    lang: zh
+    ai_only: false
+    max_items: 20
+    tags: [product, tech_life]
+
+  - id: leiphone
+    name: 雷峰网
+    type: rss
+    url: https://www.leiphone.com/feed
+    weight: 0.90
+    lang: zh
+    ai_only: false
+    max_items: 20
+    tags: [industry, research]
+
+  - id: tmtpost
+    name: 钛媒体
+    type: rss
+    url: https://www.tmtpost.com/feed
+    weight: 0.85
+    lang: zh
+    ai_only: false
+    max_items: 20
+    tags: [business, industry]
+
+  - id: infoq-cn
+    name: InfoQ 中文
+    type: rss
+    url: https://www.infoq.cn/feed
+    weight: 0.80
+    lang: zh
+    ai_only: false
+    max_items: 20
+    tags: [engineering, agent]
+
+  - id: oschina
+    name: 开源中国
+    type: rss
+    url: https://www.oschina.net/news/rss
+    weight: 0.70
+    lang: zh
+    ai_only: false
+    max_items: 20
+    tags: [open_source, engineering]
+
+  - id: zhidx
+    name: 智东西
+    type: rss
+    url: https://www.zhidx.com/rss
+    weight: 0.95
+    lang: zh
+    ai_only: false
+    max_items: 25
+    tags: [embodied, industry, product]
+
+  # ---------- 全球 AI 公司 / 研究机构 ----------
+  - id: openai
+    name: OpenAI News
+    type: rss
+    url: https://openai.com/news/rss.xml
+    weight: 1.20
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [model, product, company]
+
+  - id: deepmind
+    name: Google DeepMind
+    type: rss
+    url: https://deepmind.google/blog/rss.xml
+    weight: 1.15
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [model, research, world_model]
+
+  - id: google-ai
+    name: Google AI Blog
+    type: rss
+    url: https://blog.google/technology/ai/rss/
+    weight: 1.15
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [model, product, research]
+
+  - id: huggingface
+    name: Hugging Face Blog
+    type: rss
+    url: https://huggingface.co/blog/feed.xml
+    weight: 1.05
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [open_source, model]
+
+  - id: github-ai
+    name: GitHub Blog AI
+    type: rss
+    url: https://github.blog/ai-and-ml/feed/
+    weight: 1.00
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [coding, agent, open_source]
+
+  - id: ieee-ai
+    name: IEEE Spectrum AI
+    type: rss
+    url: https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
+    weight: 0.90
+    lang: en
+    ai_only: true
+    max_items: 15
+    tags: [research, embodied]
+
+  - id: arxiv-ai
+    name: arXiv cs.AI
+    type: rss
+    url: https://rss.arxiv.org/rss/cs.AI
+    weight: 0.65
+    lang: en
+    ai_only: true
+    max_items: 12
+    tags: [research, model]
+
+  - id: arxiv-ro
+    name: arXiv cs.RO
+    type: rss
+    url: https://rss.arxiv.org/rss/cs.RO
+    weight: 0.65
+    lang: en
+    ai_only: true
+    max_items: 12
+    tags: [research, embodied]
+
+  # ---------- 全球科技媒体 ----------
+  - id: techcrunch-ai
+    name: TechCrunch AI
+    type: rss
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    weight: 1.00
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [business, company]
+
+  - id: verge-ai
+    name: The Verge AI
+    type: rss
+    url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    weight: 0.95
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [product, tech_life]
+
+  - id: wired-ai
+    name: WIRED AI
+    type: rss
+    url: https://www.wired.com/feed/tag/ai/latest/rss
+    weight: 0.90
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [society, safety]
+
+  - id: mit-tr-ai
+    name: MIT Technology Review AI
+    type: rss
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed
+    weight: 1.00
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [research, society]
+
+  - id: the-decoder
+    name: The Decoder
+    type: rss
+    url: https://the-decoder.com/feed/
+    weight: 0.90
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [model, business]
+
+  - id: simonwillison
+    name: Simon Willison
+    type: rss
+    url: https://simonwillison.net/atom/everything/
+    weight: 0.85
+    lang: en
+    ai_only: false
+    max_items: 15
+    timeout: 35
+    tags: [coding, agent, open_source]
+
+  - id: arstechnica-lab
+    name: Ars Technica Technology Lab
+    type: rss
+    url: https://feeds.arstechnica.com/arstechnica/technology-lab
+    weight: 0.80
+    lang: en
+    ai_only: false
+    max_items: 15
+    tags: [society, safety]
+
+  # ---------- Google News 中文查询 ----------
+  - id: gn-jiqizhixin
+    name: Google News · 机器之心
+    type: google_news
+    query: "机器之心 AI when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 1.00
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [model, research]
+
+  - id: gn-xinzhiyuan
+    name: Google News · 新智元
+    type: google_news
+    query: "新智元 AI when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [model, industry]
+
+  - id: gn-36kr
+    name: Google News · 36氪
+    type: google_news
+    query: "site:36kr.com AI when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.90
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [business, company]
+
+  - id: gn-models
+    name: Google News · 大模型发布
+    type: google_news
+    query: "大模型 发布 OR 开源 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [model, product]
+
+  - id: gn-embodied
+    name: Google News · 具身智能
+    type: google_news
+    query: "具身智能 OR 人形机器人 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 1.00
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [embodied, hardware]
+
+  - id: gn-vla-world
+    name: Google News · VLA/世界模型
+    type: google_news
+    query: "VLA OR 世界模型 OR 具身大模型 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [embodied, world_model]
+
+  - id: gn-agent
+    name: Google News · Agent/治理
+    type: google_news
+    query: "AI Agent OR 智能体 治理 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [agent, governance]
+
+  - id: gn-video
+    name: Google News · AI 视频/短剧
+    type: google_news
+    query: "AI 视频生成 OR AI 短剧 OR AI 漫剧 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [creation, creator]
+
+  - id: gn-creator
+    name: Google News · AI 创作者
+    type: google_news
+    query: "AI 博主 OR 手搓 AI OR B站 AI when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.90
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [creator, tech_life]
+
+  - id: gn-open-source
+    name: Google News · 开源模型
+    type: google_news
+    query: "AI 开源模型 OR Hugging Face when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [open_source, model]
+
+  - id: gn-regulation
+    name: Google News · 监管安全
+    type: google_news
+    query: "AI 监管 OR 人工智能 立法 OR AI 安全 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [regulation, safety]
+
+  - id: gn-infra
+    name: Google News · 算力商业
+    type: google_news
+    query: "AI 芯片 OR 算力 数据中心 OR 大模型 融资 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [infra, funding]
+
+  - id: gn-interview
+    name: Google News · 大佬访谈
+    type: google_news
+    query: "AI 创始人 专访 OR 对话 OR 演讲 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.95
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [interview, people]
+
+  - id: gn-company
+    name: Google News · 公司事件
+    type: google_news
+    query: "OpenAI OR Anthropic OR 谷歌 AI OR 字节 AI when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.90
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [company, business]
+
+  - id: gn-3d
+    name: Google News · 3D/游戏
+    type: google_news
+    query: "3D 生成 OR AI 游戏 OR 世界模型 游戏 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.85
+    lang: zh
+    ai_only: true
+    max_items: 20
+    tags: [3d, game]
+
+  - id: gn-pet
+    name: Google News · AI 宠物/IP
+    type: google_news
+    query: "AI 宠物 OR 虚拟人 IP OR AI 猫 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.80
+    lang: zh
+    ai_only: true
+    max_items: 15
+    tags: [creator, pet_ip]
+
+  - id: gn-policy
+    name: Google News · 具身政策标准
+    type: google_news
+    query: "人形机器人 标准 OR 具身智能 政策 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.90
+    lang: zh
+    ai_only: true
+    max_items: 15
+    tags: [embodied, policy]
+
+  - id: gn-hardware
+    name: Google News · AI 硬件
+    type: google_news
+    query: "AI 眼镜 OR 灵巧手 OR 机器人 量产 when:7d"
+    hl: zh-CN
+    gl: CN
+    ceid: "CN:zh-Hans"
+    weight: 0.85
+    lang: zh
+    ai_only: true
+    max_items: 15
+    tags: [hardware, product]
+
+  # ---------- Google News 英文查询 ----------
+  - id: gn-global-models
+    name: Google News · Global Models
+    type: google_news
+    query: "AI model release OR open weights when:7d"
+    hl: en-US
+    gl: US
+    ceid: "US:en"
+    weight: 0.90
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [model, global]
+
+  - id: gn-global-embodied
+    name: Google News · Global Embodied
+    type: google_news
+    query: "humanoid robot OR embodied AI funding when:7d"
+    hl: en-US
+    gl: US
+    ceid: "US:en"
+    weight: 0.95
+    lang: en
+    ai_only: true
+    max_items: 20
+    tags: [embodied, global]
+
+  - id: gn-global-creators
+    name: Google News · Global Creators
+    type: google_news
+    query: "AI video creator OR AI short film viral when:7d"
+    hl: en-US
+    gl: US
+    ceid: "US:en"
+    weight: 0.85
+    lang: en
+    ai_only: true
+    max_items: 15
+    tags: [creator, global]
+
+  # ---------- 可选：自建 RSSHub 后再启用 ----------
+  # 公共 rsshub.app 经常超时/限流，不建议作为默认信源。
+  # 自建后把 enabled 改为 true，并把 base 换成你的实例。
+  # - id: rsshub-bilibili-weekly
+  #   name: B站每周必看
+  #   type: rss
+  #   url: https://your-rsshub.example.com/bilibili/ranking/0/1/3
+  #   enabled: false
+  #   weight: 0.80
+  #   lang: zh
+  #   ai_only: false
+  #   max_items: 20
+  #   tags: [creator, video]

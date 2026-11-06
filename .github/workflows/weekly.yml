@@ -1,0 +1,79 @@
+name: Weekly AI Keyword Radar
+
+on:
+  schedule:
+    # Monday 01:00 UTC = Monday 09:00 Asia/Shanghai
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Time window in days"
+        required: false
+        default: "7"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-ai-keyword-radar
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run fetch + refine
+        env:
+          DAYS: ${{ github.event.inputs.days || '7' }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://api.deepseek.com/v1' }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-chat' }}
+        run: |
+          set -euo pipefail
+          if [ -n "${LLM_API_KEY:-}" ]; then
+            python scripts/run_weekly.py --days "$DAYS" --archive --fallback-on-error --verbose
+          else
+            echo "::warning::LLM_API_KEY is not configured; using explicit heuristic fallback."
+            python scripts/run_weekly.py --days "$DAYS" --archive --no-llm --verbose
+          fi
+
+      - name: Validate output
+        run: python scripts/validate.py --input output/weekly-keywords.json --schema references/output-schema.json
+
+      - name: Upload raw data and run metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-radar-raw-${{ github.run_id }}
+          path: |
+            output/raw.json
+            output/candidates.json
+            output/run-meta.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit weekly result
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/weekly-keywords.json output/weekly-keywords.md output/archive
+          if git diff --cached --quiet; then
+            echo "No output changes; skipping commit."
+            exit 0
+          fi
+          git commit -m "chore: weekly AI keyword radar $(date -u +%F)"
+          git push

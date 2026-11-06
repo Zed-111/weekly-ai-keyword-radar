@@ -1,0 +1,168 @@
+version: 1
+updated_at: "2026-11-06"
+# 每周可以手动改这个文件来“调教”雷达。refine.py 会把这里的内容注入提示词，
+# 并在挑选进入 LLM 的条目时使用 source_weights / watchlist / boost_terms。
+
+editorial:
+  priorities:
+    - 具体人物、公司、模型、产品、场景优先于抽象趋势。
+    - 硬数字优先：参数、上下文、价格、播放量、融资额、订单量、工时、成功率。
+    - 对抗性张力优先：封锁/反制、起诉/回应、开源/闭源、替代/被替代、翻车/修复。
+    - “首次”“开源”“量产”“上岗”“临界点”必须有事实支撑，不能只看标题形容词。
+    - 大佬采访只保留真正的采访、座谈、播客、演讲、问答、内部信，并写清人物与场合。
+  avoid_in_keywords:
+    - 重磅
+    - 炸裂
+    - 刷屏
+    - 震惊
+    - 全网首发
+    - 遥遥领先
+    - 王炸
+    - 史诗级
+    - 彻底改变
+  interview_rule: "executive_interviews_and_talks 只收人物观点/场合明确的条目；普通发布会、产品通稿、公司公告不要放。没有合格条目返回 []。"
+  quality_bar: "每条关键词应能独立回答：谁/什么、发生了什么、数字或反差点是什么。做不到就不要收。"
+  routing_rules:
+    - "World Labs / Frameboy / Genie / Atlas / 世界模型 / 空间智能 / 物理仿真 → world_models；不要放 ai_model_and_product。"
+    - "开源模型、开放权重、训练代码、数据集、许可证 → ai_open_source；如果同时是重大产品发布，可以在 ai_model_and_product 保留一条不同角度，但不要复述同一事实。"
+    - "小米机器人进厂/整班作业/成功率/上岗关 → embodied_ai_metrics 或 embodied_ai_hardware_and_deployment；不要放 company_event_keywords。"
+    - "具身智能公司融资 → embodied_ai_funding_and_capital；AI 基础设施/推理平台融资 → ai_infrastructure_and_business；大公司并购 → company_event_keywords。"
+    - "VLA、具身基座模型、具身 OS、仿真平台 → embodied_ai_models_and_os；具体车型 OTA/智驾配置 → ai_tools_and_tech_life 或 embodied_ai_hardware_and_deployment。"
+    - "3D 资产、游戏引擎、UE/Unity、Blender/CAD → 3d_game_ai；世界模型/3D 场景生成 → world_models。"
+    - "采访、座谈、播客、演讲、问答、内部信 → executive_interviews_and_talks；不要把同一观点再放进 company_event_keywords。"
+    - "普通微短剧行业报告、没有 AI 制作环节的短剧新闻 → 不收；AI 漫剧的制作/成本/播放/监管才收。"
+
+source_weights:
+  qbitai: 1.15
+  zhidx: 1.00
+  leiphone: 0.95
+  openai: 1.20
+  deepmind: 1.15
+  google-ai: 1.15
+  huggingface: 1.05
+  techcrunch-ai: 1.00
+  mit-tr-ai: 1.00
+  gn-jiqizhixin: 1.05
+  gn-embodied: 1.05
+  gn-interview: 1.00
+
+watchlist:
+  people:
+    - 黄仁勋
+    - 雷军
+    - 王兴兴
+    - 李飞飞
+    - 杨植麟
+    - 梁文锋
+    - 王坚
+    - 李彦宏
+    - 马化腾
+    - 张一鸣
+    - 梁汝波
+    - 周鸿祎
+    - 余承东
+    - 何小鹏
+    - 朱啸虎
+    - Sam Altman
+    - Dario Amodei
+    - Demis Hassabis
+    - Jensen Huang
+    - Elon Musk
+    - Mark Zuckerberg
+    - Satya Nadella
+    - Mira Murati
+    - Fei-Fei Li
+  companies:
+    - OpenAI
+    - Anthropic
+    - Google DeepMind
+    - Meta
+    - 英伟达
+    - 微软
+    - 苹果
+    - 字节跳动
+    - 阿里巴巴
+    - 腾讯
+    - 百度
+    - 月之暗面
+    - DeepSeek
+    - MiniMax
+    - 智谱
+    - 商汤
+    - 科大讯飞
+    - 小米
+    - 宇树科技
+    - 智元机器人
+    - 银河通用
+    - 星海图
+    - 优必选
+    - 小鹏
+    - 特斯拉
+    - Figure
+    - 1X
+  creators:
+    - 影视飓风
+    - 何同学
+    - 老师好我叫何同学
+    - 图灵的猫
+    - 大谷的游戏频道
+
+boost_terms:
+  interview:
+    - 采访
+    - 专访
+    - 对话
+    - 访谈
+    - 座谈
+    - 演讲
+    - 播客
+    - 问答
+    - 对谈
+    - 内部信
+    - 炉边
+  creator:
+    - B站
+    - 哔哩哔哩
+    - 小红书
+    - 抖音
+    - UP主
+    - 博主
+    - 手搓
+    - 涨粉
+    - 播放量
+    - 爆款
+    - 短剧
+    - 漫剧
+    - 二创
+    - 整活
+  embodied:
+    - 具身智能
+    - 人形机器人
+    - VLA
+    - 灵巧手
+    - 机器人
+    - 量产
+    - 上岗
+    - 作业
+    - 遥操作
+    - 数据采集
+  open_source:
+    - 开源
+    - 开放权重
+    - 权重
+    - GitHub
+    - Hugging Face
+    - Star
+    - 许可证
+  world_model:
+    - 世界模型
+    - 空间智能
+    - 物理仿真
+    - 3D生成
+    - 4D
+    - 实时交互
+
+learned_rules:
+  - "2026-11-06: 第一版规则。优先保留有具体人物、硬数字、对抗性张力的条目。"
+  - 不要把“模型发布”同时塞进 company_event_keywords；公司事件只收公司级动作。
+  - 同一事件在不同信源重复出现时，合并为一条信息量最大的关键词，不要按来源重复计数。

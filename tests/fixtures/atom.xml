@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Test Atom Feed</title>
+  <link href="https://atom.example.com/" rel="alternate"/>
+  <updated>2026-11-05T12:00:00Z</updated>
+  <entry>
+    <title>Agent 平台开放第三方接入</title>
+    <link rel="alternate" href="https://atom.example.com/agent"/>
+    <published>2026-11-05T08:00:00Z</published>
+    <updated>2026-11-05T09:00:00Z</updated>
+    <summary>平台向第三方开发者开放 Agent 接入，首批 30 家。</summary>
+    <author><name>Alice</name></author>
+  </entry>
+  <entry>
+    <title>世界模型实时生成 3D 场景</title>
+    <link href="/world"/>
+    <published>2026-11-03T08:00:00Z</published>
+    <content type="html">&lt;p&gt;单卡实时生成可交互 3D 场景。&lt;/p&gt;</content>
+  </entry>
+</feed>
