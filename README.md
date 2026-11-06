@@ -2,7 +2,7 @@
 
 > 每周 AI 与具身智能关键词雷达。RSS 粗筛 + LLM 精炼 + 固定 JSON schema，关键词随当周信源更新，不是一张写死的词表。
 
-[![Weekly Radar](https://github.com/garycaogan/weekly-ai-keyword-radar/actions/workflows/weekly.yml/badge.svg)](https://github.com/garycaogan/weekly-ai-keyword-radar/actions/workflows/weekly.yml)
+[![Weekly Radar](https://github.com/Zed-111/weekly-ai-keyword-radar/actions/workflows/weekly.yml/badge.svg)](https://github.com/Zed-111/weekly-ai-keyword-radar/actions/workflows/weekly.yml)
 
 ## 这是什么
 
@@ -72,7 +72,7 @@ flowchart LR
 ## 快速开始
 
 ```bash
-git clone https://github.com/garycaogan/weekly-ai-keyword-radar.git
+git clone https://github.com/Zed-111/weekly-ai-keyword-radar.git
 cd weekly-ai-keyword-radar
 
 python3 -m venv .venv

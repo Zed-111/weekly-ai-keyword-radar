@@ -4,7 +4,7 @@ description: 每周AI与具身智能关键词提炼。当用户说“这周AI热
 metadata:
   version: 1.0.0
   status: active
-  repository: https://github.com/garycaogan/weekly-ai-keyword-radar
+  repository: https://github.com/Zed-111/weekly-ai-keyword-radar
   license: MIT
 ---
 
