@@ -215,7 +215,7 @@ gh variable set LLM_MODEL --repo <owner>/weekly-ai-keyword-radar --body "deepsee
 
 `.github/workflows/weekly.yml`：
 
-- 每周一 01:00 UTC（北京时间 09:00）运行；
+- 每周四 09:00 UTC（北京时间 17:00）运行；
 - 也支持手动 `workflow_dispatch`；
 - 抓取结果作为 artifact 上传；
 - 校验通过后，把 `output/weekly-keywords.json`、`output/weekly-keywords.md` 和归档提交回仓库。

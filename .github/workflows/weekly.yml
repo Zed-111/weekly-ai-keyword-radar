@@ -2,8 +2,8 @@ name: Weekly AI Keyword Radar
 
 on:
   schedule:
-    # Monday 01:00 UTC = Monday 09:00 Asia/Shanghai
-    - cron: "0 1 * * 1"
+    # Thursday 09:00 UTC = Thursday 17:00 Asia/Shanghai
+    - cron: "0 9 * * 4"
   workflow_dispatch:
     inputs:
       days:
